@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru,en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='css/write-note.css') }}" rel="stylesheet">
+    <title>Write Note</title>
+</head>
+<body>
+    <form>
+        <div class="inputs">
+            <input style="color: #CBC5D9;" class="title" type="text" placeholder="Title" 
+            name="title" autocomplete="off" required>
+            <textarea style="color: #CBC5D9;" class="content" type="text" placeholder="Content" name="content"
+            rows="9" autocapitalize="off" required></textarea>
+        </div>
+
+        <div class="btn-container">
+            <a class="btn-back" href="{{ referer }}">Back</a>
+            <input type="file" id="fileInput" />
+            <button id="addFileButton">Добавить файл</button>
+            <button id="sendFilesButton" disabled>Отправить файлы</button>
+            <div id="filesList"></div>
+            <!-- <label class="form-upload__label" for="filesInput"> -->
+                <!-- <input class="form-upload__input" type="file" id="filesInput" multiple accept="image/*,image/jpeg"> -->
+            <!-- <button class="btn-upload-img">Upload Images</button> -->
+            <button class="btn-publish">Save</button>
+        </div>
+    </form>
+
+    
+    <script src="{{ url_for('static', path='js/writeNote.js') }}"></script>
+</body>
+</html>

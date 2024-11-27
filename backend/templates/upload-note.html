@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{{ url_for('static', path='/css/upload-note.css') }}" rel="stylesheet">
+<title>Форма Drag-and-Drop</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+  <div id="uploadFile_Loader" class="upload-zone">
+    <form class="form-upload" id="uploadForm" method="post" enctype="multipart/form-data">
+      <!-- область для перетаскивания файлов -->
+      <div class="upload-zone_dragover">
+        <!-- текст внутри области для перетаскивания -->
+        <p>Перетащите файл сюда</p>
+      </div>
+      <!-- указываем, к какому элементу будет относиться подсказка для кнопки -->
+      <label class="form-upload__label" for="uploadForm_file">
+        <!-- подсказка для нажатия кнопки -->
+        <span class="form-upload__title">Или выберите
+        <!-- кнопка выбора файла -->
+        <input class="form-upload__input" id="uploadForm_File" type="file" name="file_name">
+        </span>
+      </label>
+      <!-- кнопка отправки на сервер -->
+      <button type="submit" class="form-upload__submit">Отправить</button>
+    </form>
+  </div>
+  <script src="{{ url_for('static', path='/js/uploadFile.js') }}"></script>
+</body>
+
+</html>

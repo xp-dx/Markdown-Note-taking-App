@@ -1,0 +1,66 @@
+/* .notes-container {
+    display: flexbox;
+    justify-content: space-between;
+} */
+
+.notes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 3 колонки равной ширины */
+     /* 2 строки равной высоты */
+    gap: 50px; /* расстояние между ячейками */
+    text-align: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    
+}
+
+.note {
+    padding: 100px;
+    /* margin: 20px 0 20px 0; */
+    background-color: #2B3040;
+
+    /* background-color: #9da180; */
+    /* background-color: #e5e0bf; */
+    /* background-color: #f0b26a; */
+    
+    border-radius: 20px;
+    display: block;
+    text-decoration: none;
+    color: #CBC5D9;
+    transition: 0.3s ease-in-out;
+
+}
+
+.note:hover {
+    background-color: #9F96D9;
+    color: #2B3040;
+}
+
+.notes-container a {
+    text-decoration: none;
+}
+
+/* .notes-container {
+    display: flexbox;
+    justify-content: space-between;
+} */
+header {
+    margin-bottom: 50px;
+}
+
+/* header h1 {
+    margin-bottom: 30px;
+} */
+
+/* header a {
+    padding: 20px;
+    background-color: #5A24A6;
+    text-decoration: none;
+    color: #CBC5D9;
+    border-radius: 20px;
+} */
+
+header a {
+    text-decoration: none;
+    color: #cbc5d964;
+}

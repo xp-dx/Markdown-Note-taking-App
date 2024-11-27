@@ -1,0 +1,132 @@
+/* внешний вид всей области */
+.form-upload {
+    /* область подстраиваится под ширину внутренних элементов */
+    display: inline-flex;
+    /* выстраиваем все элементы внутри в столбец */
+    flex-direction: column;
+    /* центрируем внутренние элементы по горизонтали */
+    align-items: center;
+    /* центрируем элементы по вертикали */
+    justify-content: center;
+    /* область занимает 100% ширины окна браузера */
+    width: 100%;
+    /* область занимает 100% высоты окна браузера */
+    min-height: 100vh;
+    /* выставляем внутренние отступы */
+    padding: 16px;
+  }
+  
+  /* область для перетаскивания файлов */
+  .upload-zone_dragover {
+    /* цвет фона */
+    background-color: #4061EA;
+    /* форма подстраивается под размеры элементов */
+    display: inline-flex;
+    /* центрируем внутренние элементы по горизонтали */
+    align-items: center;
+    /* центрируем элементы по вертикали */
+    justify-content: center;
+    /* центрируем элементы по вертикали */
+    justify-content: center;
+    /* ширина */
+    width: 450px;
+    /* высота */
+    height: 250px;
+    /* внутренние отступы */
+    padding: 16px;
+    /* скругление рамки */
+    border-radius: 10px;
+    /* цвет текста */
+    color: #ffffff;
+    /* размер текста */
+    font-size: 24px;
+    /* тень с размытием */
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* область с кнопкой и подпись к ней */
+  .form-upload__label {
+    /* область занимает всю область элемента, внутри которого находится */
+    display: flex;
+    /* подпись к кнопке */
+    flex-direction: column;
+    /* центрируем внутренние элементы по горизонтали */
+    align-items: center;
+  }
+  /* подпись к кнопке */
+  .form-upload__title {
+    /* размер шрифта */
+    font-size: 16px;
+    /* насыщенность шрифта */
+    font-weight: 500;
+    /* шрифт */
+    font-family: Arial, sans-serif;
+    /* отступ над текстом */
+    margin-top: 8px;
+    /* отступ под текстом */
+    margin-bottom: 8px;
+  }
+  
+  /* кнопка выбора файла */
+  .form-upload__label input[type="file"]::file-selector-button {
+    /* убираем рамку */
+    border: none;
+    /* скругляем углы */
+    border-radius: 8px;
+    /* размер шрифта */
+    font-size: 16px;
+    /* шрифт и его цвет */
+    font-family: Arial, sans-serif;
+    color: #000000;
+    /* внутренние отступы */
+    padding: 8px 16px;
+  }
+  
+  /* цвет кнопки выбора файла при наведении на неё курсора */
+  .form-upload__label input[type="file"]::file-selector-button:hover {
+    background-color: #FD7F4A;
+    }
+    /* шрифт названия файла */
+    .form-upload__input {
+    /* шрифт */
+    font-family: Arial, sans-serif;
+    /* размер шрифта */
+    font-size: 16px;
+  }
+  
+  /* стили для кнопки отправки формы */
+  button[type="submit"] {
+    /* отступ над текстом */
+    margin-top: 8px;
+    /* цвет фона */
+    background-color: #c4c4c4;
+    /* цвет текста */
+    color: white;
+    /* внутренние отступы */
+    padding: 12px 20px;
+    /* убираем границу */
+    border: none;
+    border-radius: 8px;
+    /* размер шрифта */
+    font-size: 18px;
+    /* шрифт */
+    font-family: Arial, sans-serif;
+    /* цвет шрифта */
+    color: #000000;
+    /* курсор в виде указателя при наведении */
+    cursor: pointer;
+  }
+  
+  /* стили для кнопки отправки формы при наведении */
+  button[type="submit"]:hover {
+    /* цвет фона кнопки при наведении */
+    background-color: #D4FB51;
+  }
+  
+  /* стили для состояния, когда над формой держат файл */
+  .upload-zone_dragover._active {
+    /* цвет текста */
+    color: #000000;
+    /* цвет фона */
+    background-color: #D4FB51;
+  }

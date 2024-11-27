@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru,en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/note.css') }}" rel="stylesheet">
+     
+    <title>{{ note_db.title }}</title>
+</head>
+<header>
+    <h1 style="text-align: center;">{{ note_db.title }}</h1>
+</header>
+<body>
+<!-- <p><img alt="cat" src="/static/img/ABSOLUTE2.gif" /></p> -->
+<!-- <img src="{{ url_for('static', path='/img/ABSOLUTE2.gif') }}" alt="Изображение"> -->
+    {{ note | safe }}
+    <div class="btn-container">
+        <hr>
+        <a class="btn-back" href="/home">HOME</a>
+        <!-- <a href="/write-note">New note</a> -->
+
+        <!-- <a class="btn-back" href="/home">< Previous Page</Previous></a> -->
+    </div>
+</body>
+</html>
